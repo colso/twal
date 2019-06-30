@@ -12,7 +12,7 @@ def getValue(value):
 			evalValue = value
 		else:
 			evalValue = eval(value)
-		if type(evalValue) in [int, float, list, tuple, dict]:
+		if type(evalValue) in [int, float, list, tuple, dict, str]:
 			return evalValue
 	except NameError:
 		pass

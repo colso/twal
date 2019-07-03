@@ -85,7 +85,8 @@ def main():
 	ctp = tdb.candi_tbl()
 	ctp.set_db_connection(db_conn)
 	for key in m_dic.keys():
-		if ctp.torr_candi_search(key):
+		ret, result =  ctp.torr_candi_search(key):
+		if result:
 			print("This magnet already exist in table. ({})".format(key))
 		else:
 			item = tdb.candi_tbl_t(key, m_dic[key]['title'], int(time.time()), 0, '', 'torrentwal.com')

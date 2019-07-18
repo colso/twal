@@ -65,6 +65,7 @@ def main():
         print("DB connected")
     else:
         print("DB NOTTTTTTT connected")
+    db_conn.set_charset('utf8mb4')
     g_conn = http.client.HTTPSConnection(t_url)
     if not g_conn:
         print("Please check url %s" % t_url)
